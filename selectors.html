@@ -26,23 +26,43 @@ h2 {font-family: "Lato-Medium", Verdana, Arial, Helvetica, sans-serif; font-size
 <body>
 <header><h1>CSS Selectors</h1>
 </header>
+
 <!-- X + Y -->
 <div class="bx"><h2>X + Y</h2>
 <p>only the element after</p>
 <style type="text/css">
 #hrl + #para {
-	color: orange;
+	color: green;
 }
 </style>
 hr + p
 <hr id="hrl">
 <hr id="hrl">
-<p id="para">This should be orange</p>
+<p id="para">This should be green</p>
 <p id="para">This should not</p>
 </div> 
-<!-- X > Y -->
-<div class="bx"><h2>X > Y</h2></div> 
 
+<!-- X > Y -->
+<div class="bx"><h2>X > Y</h2>
+	<p>only the child of</p>
+	<style type="text/css">
+	#divvy {background-color:#FDFFC3; display:block; padding: 2px 12px 2px 0; border: 1px solid #ccc; border-radius: 4px; margin: 4px 0 0 0;}
+	div#divvy > ul {
+	color: green;
+	font-weight: bolder;
+	}
+	</style>
+	div > ul
+	<div id="divvy">
+		<ul>
+		<li>ul child</li>
+		</ul>
+	</div>
+	<hr>
+	<ul>
+	<li>not child ul</li>
+	</ul>
+</div> 
 <footer>
 </footer>
 </body>
