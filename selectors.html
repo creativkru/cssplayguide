@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <style type="text/css">
+/*- - - - - - - - - - - - -*/
+/*- - -    GLOBAL     - - -*/
 @font-face {
 font-family: Lato-Light;
 src: url(Lato-Light.eot);
@@ -15,38 +17,54 @@ src: url(Lato-Medium.eot);
 src: local('Lato-Medium'), local('Lato-Medium'),
 url(Lato-Medium.ttf) format('truetype');
 }
-body {	font-family:"Lato-Light",Verdana, Arial, Helvetica, sans-serif;	font-size:14px;	}
-h1 {font-family: "Lato-Medium", Verdana, Arial, Helvetica, sans-serif; font-size: 20pt;}
-h2 {font-family: "Lato-Medium", Verdana, Arial, Helvetica, sans-serif; font-size: 16pt; margin-top: 0; margin-bottom: 0; color: #3250AD;}
+body {font-family:"Lato-Light",Verdana, Arial, Helvetica, sans-serif; font-size:14px; }
+/*- - - - - - - - - - - - -*/
+/*- - -   HEADER      - - -*/
 
-.bx {background-color: #eee; border: 1px solid #ccc; padding: 10px; float: left; margin:10px; max-width: 200px;}
+/*- - - - - - - - - - - - -*/
+/*- - -   STRUCTURE   - - -*/
+.bx {background-color: #eee; border: 1px solid #ccc; padding: 10px; float: left; margin:10px; width: 200px;}
+/*- - - - - - - - - - - - -*/
+/*- - -   HEADINGS    - - -*/
+h1, h2 {font-family: "Lato-Medium", Verdana, Arial, Helvetica, sans-serif;}
+	h1 {font-size: 20pt;}
+	h2 {font-size: 16pt; margin: 0 0; color: #3250AD;}
+/*- - - - - - - - - - - - -*/
+/*- - -   TEXT        - - -*/
 
+/*- - - - - - - - - - - - -*/
+/*- - -   NAVIGATION  - - -*/
+
+/*- - - - - - - - - - - - -*/
+/*- - -   FORMS       - - -*/
+
+/*- - - - - - - - - - - - -*/
+/*- - -   COMMENTS    - - -*/
 </style>
 </head>
 <body>
-<header><h1>CSS Selectors</h1>
+<header><h1 style="margin-left:10px">CSS Selectors</h1>
 </header>
 
 <!-- X + Y -->
 <div class="bx"><h2>X + Y</h2>
-<p>only the element after</p>
-<style type="text/css">
-#hrl + #para {
+	<p>only the element after</p>
+	<style type="text/css">
+	hr + p {
 	color: green;
-}
-</style>
-hr + p
-<hr id="hrl">
-<hr id="hrl">
-<p id="para">This should be green</p>
-<p id="para">This should not</p>
+	}
+	</style>
+	hr + p
+	<hr>
+	<p>This should be green</p>
+	<p>This should not</p>
 </div> 
 
 <!-- X > Y -->
 <div class="bx"><h2>X > Y</h2>
 	<p>only the child of</p>
 	<style type="text/css">
-	#divvy {background-color:#FDFFC3; display:block; padding: 2px 12px 2px 0; border: 1px solid #ccc; border-radius: 4px; margin: 4px 0 0 0;}
+	#divvy {background-color:#FCFFE1; display:block; padding: 2px 0 2px 0; border: 1px solid #ccc; border-radius: 4px; margin: 4px 0 0 0;}
 	div#divvy > ul {
 	color: green;
 	font-weight: bolder;
@@ -55,14 +73,15 @@ hr + p
 	div > ul
 	<div id="divvy">
 		<ul>
-		<li>ul child</li>
+			<li>ul child</li>
 		</ul>
 	</div>
 	<hr>
 	<ul>
-	<li>not child ul</li>
+		<li>not child ul</li>
 	</ul>
 </div> 
+
 <footer>
 </footer>
 </body>
