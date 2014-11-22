@@ -51,13 +51,13 @@ h1, h2 {font-family: "Lato-Medium", Verdana, Arial, Helvetica, sans-serif;}
 	<p>only the element after</p>
 	<style type="text/css">
 	hr + p {
-	color: green;
+		color: green;
 	}
 	</style>
 	hr + p
 	<hr>
-	<p>This should be green</p>
-	<p>This should not</p>
+	<p>This p should be green</p>
+	<p>This p should not</p>
 </div> 
 
 <!-- X > Y -->
@@ -66,8 +66,8 @@ h1, h2 {font-family: "Lato-Medium", Verdana, Arial, Helvetica, sans-serif;}
 	<style type="text/css">
 	#divvy {background-color:#FCFFE1; display:block; padding: 2px 0 2px 0; border: 1px solid #ccc; border-radius: 4px; margin: 4px 0 0 0;}
 	div#divvy > ul {
-	color: green;
-	font-weight: bolder;
+		color: green;
+		font-weight: bolder;
 	}
 	</style>
 	div > ul
@@ -80,6 +80,34 @@ h1, h2 {font-family: "Lato-Medium", Verdana, Arial, Helvetica, sans-serif;}
 	<ul>
 		<li>not child ul</li>
 	</ul>
+</div> 
+
+<!-- X ~ Y -->
+<div class="bx"><h2>X ~ Y</h2>
+	<p>the element after (less strict)</p>
+	<style type="text/css">
+	p ~ div#div2 {
+		color: green;
+	}
+	</style>
+	p ~ div
+	<p>The next items will change</p>
+	<div id="div2">This div is green</div>
+    <div id="div2">This div is also green</div>
+    <p>Not this p</p>
+</div> 
+
+<!-- X[title] -->
+<div class="bx"><h2>X[title]</h2>
+	<p>Applies to [item] only </p>
+	<style type="text/css">
+	div[title] {
+		color: green;
+	}
+	</style>
+	div[title]
+	<div title="hello">Div with title is green</div>
+    <div>Div w/o title is not</div>
 </div> 
 
 <footer>
